@@ -1,0 +1,17 @@
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <input type="text" name="title" value="{{ blog.title }}"><br><br>
+
+    <textarea name="content">{{ blog.content }}</textarea><br><br>
+
+    <input type="text" name="author" value="{{ blog.author }}"><br><br>
+
+    {% if blog.image %}
+        <img src="{{ blog.image.url }}" width="200"><br>
+    {% endif %}
+
+    <input type="file" name="image"><br><br>
+
+    <button type="submit">Update Blog</button>
+</form>

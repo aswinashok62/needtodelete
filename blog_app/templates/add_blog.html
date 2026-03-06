@@ -1,0 +1,18 @@
+<h2>Add Blog</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <label>Title</label><br>
+    <input type="text" name="title"><br><br>
+
+    <label>Content</label><br>
+    <textarea name="content"></textarea><br><br>
+
+    <label>Author</label><br>
+    <input type="text" name="author"><br><br>
+
+    <input type="file" name="image"><br><br>
+
+    <button type="submit">Add Blog</button>
+</form>
